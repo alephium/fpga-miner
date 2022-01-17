@@ -138,7 +138,7 @@ logic                                 awvalid_r    = 1'b0;
 logic [C_M_AXI_ADDR_WIDTH-1:0]        addr;
 logic                                 wfirst_d1    = 1'b0;
 logic                                 wfirst_pulse = 1'b0;
-logic                                 idle_aw;
+logic                                 idle_aw      = 1'b1;
 logic                                 aw_final_transaction;
 // Write response channel
 wire                                  bxfer;
@@ -217,7 +217,7 @@ always @(posedge aclk) begin
 end
 
 always @(posedge aclk) begin
-  if (areset) begin
+  if (~areset) begin
     wfirst <= 1'b1;
   end
   else begin
