@@ -1,3 +1,5 @@
+## This project did not achieve the quality we expect, and it's not under development any more. Please don't use this as reference implementation of FPGA miner.
+
 ## Installing ModelSim
 
 Go to the intelFpga 
